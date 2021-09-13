@@ -79,8 +79,18 @@ public class PersonDANE implements Comparable<PersonDANE> {
 	@Override
 	public int compareTo(PersonDANE o) {
 		// TODO Auto-generated method stub
-		return this.ege - o.ege;
+		//return this.ege - o.ege;//compara por edad
+		//return this.nome.compareTo(o.nome);//compara por nombre
+		//return this.estrato-o.estrato;//compara por estrato
+		int criterioA = this.estrato-o.estrato;//compara por estrato y apellido 
+		if (criterioA==0) {
+			int criterioB=this.lastname.compareTo(o.lastname);
+			return criterioB;
+		}else {
+			return criterioA;
+		}
 	}
+	//belongs to MargeSorf
 	
 	
 	
